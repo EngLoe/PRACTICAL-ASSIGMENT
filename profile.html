@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PROFILE<?php echo htmlspecialchars($username); ?></h1>
+        <!-- Display success or error message -->
+        <?php if ($success_message): ?>
+            <div class="alert alert-success"><?php echo $success_message; ?></div>
+        <?php endif; ?>
+        <?php if ($error_message): ?>
+            <div class="alert alert-danger"><?php echo $error_message; ?></div>
+        <?php endif; ?>
+
+        <form method="post" action="">
+            <input type="email" name="email" placeholder="New Email" required>
+            <input type="password" name="new_password" placeholder="New Password (leave blank to keep current)">
+            <button type="submit" name="update">Update Profile</button>
+        </form>
+
+        <!-- Role-based access control links -->
+        <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'): ?>
+            <a href="admin.php" class="admin-link">View All Users</a>
+            <a href="admindashboard.php" class="admin-link">Admin Dashboard</a>
+        <?php endif; ?>
+
+        <a href="logout.php">Logout</a>
+    </div>
+</body>
+
+</html>

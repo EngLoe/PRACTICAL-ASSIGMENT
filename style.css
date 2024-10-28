@@ -1,0 +1,81 @@
+/* General styling for body and main container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Form container styling */
+.form-container {
+    max-width: 400px;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+h1{
+        font-weight: bold;  /* Makes the text bold */
+        text-align: center; /* Centers the text */
+        color: hsl(318, 85%, 26%);
+    
+}
+/* Heading styling */
+h2 {
+    color: purple;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Input and button styling */
+input[type="text"], input[type="email"], input[type="password"], button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Button styling */
+button {
+    background-color: purple;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #800080;
+}
+
+/* Link styling as button */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: purple;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #800080;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
